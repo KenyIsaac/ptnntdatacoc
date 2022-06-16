@@ -1,12 +1,20 @@
 import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages';
+import SigninPage from './pages/signin';
 
-function App() {
+// import { render } from '@testing-library/react';
+
+const App = () => {
   return (
-    <Router>
-      <Home />
-    </Router>
+    <BrowserRouter>
+  
+      <Routes>
+        <Route path="/" element={<Home />} exact />
+        <Route path="/signin" element={<SigninPage />} exact />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
