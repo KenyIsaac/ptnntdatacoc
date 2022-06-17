@@ -5,6 +5,7 @@ import {
     FaGithub, 
     FaLinkedin
 } from 'react-icons/fa';
+import { animateScroll as scroll } from 'react-scroll';
 import {
     FooterContainer,
     FooterWrap,
@@ -22,6 +23,9 @@ import {
 } from './FooterElements';
 
 const Footer = () => {
+    const toggleHome = () =>{
+        scroll.scrollToTop();
+    }
   return (
     <FooterContainer>
         <FooterWrap>
@@ -29,57 +33,53 @@ const Footer = () => {
                 <FooterLinksWrapper>
                     <FooterLinkItems>
                         <FooterLinkTitle>Sobre el juego </FooterLinkTitle>
-                        <FooterLink href="https://clashofclans.com/es/blog/" target="_blank">Página oficial</FooterLink>
-                        <FooterLink href="https://clashofclans.com/es/blog/community/clashofclans-present-and-future.html" target="_blank">Algunos datos</FooterLink>
-                        <FooterLink href="https://www.youtube.com/watch?v=DDY6KjQCMoQ" target="_blank">Videos</FooterLink>
+                        <FooterLink to="/">Página oficial</FooterLink>
+                        <FooterLink to="/">Algunos datos</FooterLink>
+                        <FooterLink to="/">Videos</FooterLink>
                     </FooterLinkItems>
                     <FooterLinkItems>
                         <FooterLinkTitle>Sobre el API</FooterLinkTitle>
-                        <FooterLink href="https://developer.clashofclans.com/#/" target="_blank">Página oficial</FooterLink>
-                        <FooterLink href="https://developer.clashofclans.com/#/getting-started" target="_blank">Algunos datos</FooterLink>
-                        <FooterLink href="https://www.youtube.com/watch?v=DDY6KjQCMoQ" target="_blank">Videos</FooterLink>
+                        <FooterLink to="/">Página oficial</FooterLink>
+                        <FooterLink to="/">Algunos datos</FooterLink>
+                        <FooterLink to="/">Videos</FooterLink>
                     </FooterLinkItems>
                 </FooterLinksWrapper>
                 <FooterLinksWrapper>
                     <FooterLinkItems>
                         <FooterLinkTitle>Sobre mí </FooterLinkTitle>
-                        <FooterLink href="https://github.com/KenyIsaac" target="_blank">Github</FooterLink>
-                        <FooterLink href="https://kenyisaac.netlify.app/" target="_blank">Portafolio</FooterLink>
-                        <FooterLink href="https://www.linkedin.com/in/keny-isaac-lovera" target="_blank">LinkedIn</FooterLink> 
+                        <FooterLink to="/">Github</FooterLink>
+                        <FooterLink to="/">Portafolio</FooterLink>
+                        <FooterLink to="/">LinkedIn</FooterLink> 
                     </FooterLinkItems>
                 </FooterLinksWrapper>
             </FooterLinksContainer>
             <SocialMedia>
                 <SocialMediaWrap>
-                    <SocialLogo to='/'>
-                        Logo
+                    <SocialLogo to='/' onClick={toggleHome}>
+                    Clash of clans
                     </SocialLogo>
                     <WebsiteRight>Keny Isaac ® 2022 { new Date().getFullYear() } Todos los derechos reservados </WebsiteRight>
                     <SocialIcons>
                         <SocialIconLink 
-                        href="https://www.facebook.com/" 
-                        target="_blank" 
+                        to="/" 
                         aria-label="Facebook"
                         >
                             <FaFacebook />
                         </SocialIconLink>
                         <SocialIconLink 
-                        href="https://instagram.com/kenyisaac" 
-                        target="_blank" 
+                        to="/" 
                         aria-label="Instagram"
                         >
                             <FaInstagram />
                         </SocialIconLink>
                         <SocialIconLink 
-                        href="https://www.linkedin.com/in/keny-isaac-lovera" 
-                        target="_blank" 
+                        to="/" 
                         aria-label="LinkedIn"
                         >
                             <FaLinkedin />
                         </SocialIconLink>
                         <SocialIconLink 
-                        href="https://github.com/KenyIsaac" 
-                        target="_blank" 
+                        to="/" 
                         aria-label="GitHub"
                         >
                             <FaGithub />

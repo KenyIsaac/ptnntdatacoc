@@ -26,7 +26,7 @@ const HeroSection = () => {
         <HeroBg>
             <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
         </HeroBg>
-        <HeroContent>
+        <HeroContent id='home'>
             <HeroH1>Clash of Clans Page</HeroH1>
             <HeroP>
                 Inicie sesión para comenzar.
@@ -38,6 +38,11 @@ const HeroSection = () => {
                     onMouseEnter={onHover} 
                     primary="true"
                     dark="true"
+                    smooth={true} 
+                    duration={500} 
+                    spy={true} 
+                    exact='true' 
+                    offset={-80}
                 >
                     Inicia aquí{ hover ? <ArrowForward /> : <ArrowRight />}
                 </Button>
